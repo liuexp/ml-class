@@ -26,11 +26,11 @@ m = size(X,1);
 for i = 1:m
 	v=zeros(K,1);
 	for j = 1:K
-		vv=X(i,:) - centroids(j,:)
-		v(j)=vv * vv'
-	end
-	[tmp,idx(i)]=min(v)
-end
+		vv=X(i,:) - centroids(j,:);
+		v(j)=vv * vv';
+	end;
+	[tmp,idx(i)]=min(v);
+end;
 
 
 

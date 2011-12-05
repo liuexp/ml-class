@@ -30,13 +30,13 @@ centroids = zeros(K, n);
 
 
 
-cnt=zeros(K,1)
+cnt=zeros(K,1);
 for i = 1:m
-	centroids(idx(i),:)+=X(i,:)
-	cnt(idx(i))+=1
+	centroids(idx(i),:)=centroids(idx(i),:)+X(i,:);
+	cnt(idx(i))=cnt(idx(i))+1;
 end
 for i =1:K
-	centroids(i,:)=centroids(i,:)./cnt(i)
+	centroids(i,:)=centroids(i,:)./cnt(i);
 end
 
 % =============================================================
